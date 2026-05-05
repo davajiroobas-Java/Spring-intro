@@ -1,3 +1,16 @@
+
+//Uppgift
+//Implementera två endpoints:
+//
+/// Encrypt Tar emot en text eller ord och returnerar en krypterad version.
+//
+///Decrypt Tar emot den krypterade texten och återställer den till originalform.
+//
+//Metod: Välj själv en algoritm, till exempel Caesar-chiffer, Rövarspråket eller en egen påhittad logik.
+
+
+
+
 package org.example.springintro; // Paketnamn för projektet
 
 import org.springframework.web.bind.annotation.*; // Importerar Spring annotations för REST API
@@ -11,7 +24,8 @@ import java.nio.charset.StandardCharsets; // För att säkerställa rätt tecken
 @RequestMapping("/") // Bas-URL för alla endpoints i denna klass
 public class EndpointCrypto {
 
-    private static final String SECRET = "mySecretKey"; // "hemlig" nyckel som läggs till (OBS: inte säker i verkligheten)
+    private static final String SECRET = "mySecretKey"; // "hemlig" nyckel som läggs till
+    // (OBS: inte säker i verkligheten)
 
     @PostMapping("/encrypt") // Hanterar POST requests till /encrypt
     public String encrypt(@RequestBody String input) { // Tar emot data i request body
